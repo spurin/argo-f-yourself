@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: wordpress
+    tier: mysql
+  name: wordpress-mysql
+  namespace: my-argo-ns
+spec:
+  clusterIP: None
+  ports:
+  - port: 3306
+    protocol: TCP
+    targetPort: 3306
+  selector:
+    app: wordpress
+    tier: mysql
