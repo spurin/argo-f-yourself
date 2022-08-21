@@ -33,7 +33,7 @@ spec:
           value: app_password
         volumeMounts:
         - name: mysql-persistent-storage
-          mountPath: /mnt/data
+          mountPath: /var/lib/mysql
       volumes:
       - name: mysql-persistent-storage
         persistentVolumeClaim:
