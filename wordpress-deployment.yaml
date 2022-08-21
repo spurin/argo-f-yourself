@@ -21,20 +21,18 @@ spec:
         ports:
         - containerPort: 80
         env:
+        # Target the host via a headless service for wordpress-mysql
         - name: WORDPRESS_DB_HOST
           value: wordpress-mysql
         - name: WORDPRESS_DB_USER
-          value: app_user
+          value: mysql_user
         - name: WORDPRESS_DB_NAME
-          value: app_db
-        - name: WORDPRESS_DEBUG
-          value: "1"
+          value: mysql_db
         - name: WORDPRESS_DB_PASSWORD
-          value: app_password
-          #valueFrom:
-          #  secretKeyRef:
-          #    name: mysql-password
-          #    key: password
+          valueFrom:
+            secretKeyRef:
+              name: mysql-password
+              key: password
         volumeMounts:
         - name: wordpress-persistent-storage
           mountPath: /var/www/html
