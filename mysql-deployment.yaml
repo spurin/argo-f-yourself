@@ -26,14 +26,11 @@ spec:
         - name: MYSQL_RANDOM_ROOT_PASSWORD
           value: "1"
         - name: MYSQL_DATABASE
-          value: wordpress-db
+          value: app-db
         - name: MYSQL_USER
-          value: wordpress-user
+          value: app-user
         - name: MYSQL_PASSWORD
-          valueFrom:
-            secretKeyRef:
-              name: mysql-password
-              key: password
+          value: app-pass
         volumeMounts:
         - name: mysql-persistent-storage
           mountPath: /var/lib/mysql
