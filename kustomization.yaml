@@ -1,4 +1,0 @@
-secretGenerator:
-- name: mysql-pass
-  literals:
-  - password=YOUR_PASSWORD
