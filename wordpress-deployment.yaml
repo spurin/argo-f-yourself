@@ -21,6 +21,8 @@ spec:
         ports:
         - containerPort: 80
         env:
+        - name: WORDPRESS_DEBUG
+          value: "1"
         - name: WORDPRESS_DB_HOST
           value: wordpress-mysql
         - name: WORDPRESS_DB_USER
