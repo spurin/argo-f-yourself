@@ -23,7 +23,13 @@ spec:
         ports:
         - containerPort: 3306
         env:
-        - name: MYSQL_ROOT_PASSWORD
+        - name: MYSQL_RANDOM_ROOT_PASSWORD
+          value: "1"
+        - name: MYSQL_DATABASE
+          value: wordpress-db
+        - name: MYSQL_USER
+          value: wordpress-user
+        - name: MYSQL_PASSWORD
           valueFrom:
             secretKeyRef:
               name: mysql-password
