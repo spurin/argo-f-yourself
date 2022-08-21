@@ -24,13 +24,13 @@ spec:
         - name: WORDPRESS_DB_HOST
           value: wordpress-mysql
         - name: WORDPRESS_DB_USER
-          value: mysql_user
+          value: mysql-user
         - name: WORDPRESS_DB_NAME
-          value: mysql_db
+          value: mysql-db
         - name: WORDPRESS_DB_PASSWORD
           valueFrom:
             secretKeyRef:
-              name: mysql_password
+              name: mysql-password
               key: password
         volumeMounts:
         - name: wordpress-persistent-storage

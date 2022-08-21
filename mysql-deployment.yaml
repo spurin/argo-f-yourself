@@ -26,13 +26,13 @@ spec:
         - name: MYSQL_RANDOM_ROOT_PASSWORD
           value: "1"
         - name: MYSQL_DATABASE
-          value: mysql_db
+          value: mysql-db
         - name: MYSQL_USER
-          value: mysql_user
+          value: mysql-user
         - name: MYSQL_PASSWORD
           valueFrom:
             secretKeyRef:
-              name: mysql_password
+              name: mysql-password
               key: password
         volumeMounts:
         - name: mysql-persistent-storage
