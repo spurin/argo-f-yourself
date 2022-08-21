@@ -23,8 +23,8 @@ spec:
         ports:
         - containerPort: 3306
         env:
-        - name: MYSQL_RANDOM_ROOT_PASSWORD
-          value: "1"
+        - name: MYSQL_ROOT_PASSWORD
+          value: root
         - name: MYSQL_DATABASE
           value: mysql-db
         - name: MYSQL_USER
