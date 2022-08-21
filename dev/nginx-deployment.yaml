@@ -6,7 +6,7 @@ metadata:
     app: my-dep
   name: my-dep
 spec:
-  replicas: 5
+  replicas: 3
   selector:
     matchLabels:
       app: my-dep
@@ -18,7 +18,7 @@ spec:
         app: my-dep
     spec:
       containers:
-        - image: nginx:alpine
+      - image: nginx
         name: nginx
         resources: {}
 status: {}
