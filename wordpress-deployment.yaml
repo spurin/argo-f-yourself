@@ -3,12 +3,14 @@ kind: Deployment
 metadata:
   labels:
     app: wordpress
+    tier: frontend
   name: wordpress
 spec:
   replicas: 1
   selector:
     matchLabels:
       app: wordpress
+      tier: frontend
   template:
     metadata:
       labels:
