@@ -3,6 +3,7 @@ kind: Service
 metadata:
   labels:
     app: wordpress
+    tier: frontend
   name: wordpress
 spec:
   ports:
