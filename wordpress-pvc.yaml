@@ -4,7 +4,6 @@ metadata:
   name: wordpress-pvc
   labels:
     app: wordpress
-    tier: frontend
 spec:
   accessModes:
     - ReadWriteOnce
